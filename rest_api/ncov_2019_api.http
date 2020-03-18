@@ -1,0 +1,11 @@
+@baseUrl = https://apigw.nubentos.com:443
+@authorization = "bkV6OGowclpmT2RrTDQ3ZjhzRzNzN1FBcEpZYTo1QUFrUGRtbTFVMUdVMklBQ2RPd2RzQXZJVzhh"
+# Used to get an access token given an autorization key
+
+POST {{baseUrl}}/token?grant_type=client_credentials
+Authorization: Basic {{authorization}}
+
+###
+GET {{{{baseUrl}}}}/t/nubentos.com/ncovapi/1.0.0/cases
+Accept: application/json
+Authorization: Bearer {{accessToken}}
